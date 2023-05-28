@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "136974793902",
+    "firebase_url": "https://aplikasi-pmo-galang-default-rtdb.firebaseio.com",
+    "project_id": "aplikasi-pmo-galang",
+    "storage_bucket": "aplikasi-pmo-galang.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136974793902:android:8446b15b1fee74cc85013f",
+        "android_client_info": {
+          "package_name": "com.aplikasipmo.myapk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136974793902-iqahftp9ddbvirhr0vd485qvl4kfcsbg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aplikasipmo.myapk",
+            "certificate_hash": "14024de708043b3f338563cc5f7fefb4ad50b1dc"
+          }
+        },
+        {
+          "client_id": "136974793902-tgcbt7g8ipkahfct1ic7luasunv65nqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBae1lsBvEqeRkOlQuSzhdrfWVzIBrk9Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136974793902-tan0aj09db6agv69ti7p1podf2876u01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AplikasiPMO" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange_2</item>
+        <item name="colorPrimaryDark">@color/dark_2</item>
+        <item name="colorAccent">@color/orange_1</item>
+        <!-- Customize your theme here. -->
+        <item name="itemBackground">@color/dark_2</item>
+    </style>
+
+    <style name="Theme.AplikasiPMO.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AplikasiPMO.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:fontFamily">@font/outfit_medium</item>
+    </style>
+
+    <style name="Theme.AplikasiPMO.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

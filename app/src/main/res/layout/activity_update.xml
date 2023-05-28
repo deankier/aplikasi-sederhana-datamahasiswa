@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_2"
+    tools:context=".CrudActivity">
+
+    <!-- Nav Bar -->
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:background="@color/dark_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="60dp"
+            android:fontFamily="@font/outfit_medium"
+            android:gravity="center"
+            android:text="Data Mahasiswa"
+            android:textColor="@color/white"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/btn_popup_mn"
+            android:onClick="showPopUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more"
+            android:visibility="invisible"
+            android:background="@drawable/bg_transparent"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/nav_bar">
+        <!-- Content Container Parent -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+
+            <!-- Content Container Child  -->
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_container_auth"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="25dp">
+
+                <!-- EdT Nama  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_nama"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Nama"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_nama_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- EdT Nim & tgl -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Nim -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_nim"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="NIM"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_nim_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="8"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- tgl -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_tgl"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:hint="Tgl Lahir"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_tgl_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="date"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            android:focusable="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- EdT Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_email"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Email"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_email_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- EdT Hp & IPK -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!-- HP -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_hp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.75"
+                        android:hint="No HP"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_hp_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- IPK -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_ipk"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1.25"
+                        android:hint="IPK"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_ipk_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Spinner Fakultas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dwn_layout_fakultas"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Fakultas"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:endIconTint="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dwn_fakultas_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:dropDownSelector="@color/dark_2"
+                            android:editable="false"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="text"
+                            android:focusable="false"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Spinner Prodi -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dwn_layout_prodi"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Prodi"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:endIconTint="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dwn_prodi_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:dropDownSelector="@color/dark_2"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="text"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Combo Box -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingVertical="10dp"
+                    android:background="@drawable/bg_container_auth"
+                    android:backgroundTint="@color/dark_2"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/outfit_regular"
+                            android:text="Jenis Kelamin"
+                            android:textColor="@color/orange_2" />
+
+                        <RadioGroup
+                            android:id="@+id/gender_update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/pria_update"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/outfit_regular"
+                                android:text="Pria"
+                                android:textColor="@color/orange_2">
+
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/wanita_update"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/outfit_regular"
+                                android:text="Wanita"
+                                android:textColor="@color/orange_2">
+
+                            </RadioButton>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/outfit_regular"
+                            android:text="Golongan Darah"
+                            android:textColor="@color/orange_2" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/gol_darah_update"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:id="@+id/gol_a_update"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="A"
+                                    android:textColor="@color/orange_2"/>
+                                <RadioButton
+                                    android:id="@+id/gol_b_update"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="B"
+                                    android:textColor="@color/orange_2"/>
+                                <RadioButton
+                                    android:id="@+id/gol_ab_update"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="AB"
+                                    android:textColor="@color/orange_2"/>
+                                <RadioButton
+                                    android:id="@+id/gol_o_update"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="O"
+                                    android:textColor="@color/orange_2"/>
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Foto -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Foto"
+                        android:textSize="17dp"
+                        android:textColor="@color/orange_2" />
+                    <LinearLayout
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_image">
+                        <ImageView
+                            android:id="@+id/foto_container_update"
+                            android:layout_margin="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_image"/>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_pilih_foto_update"
+                        android:text="Pilih Foto"
+                        android:background="@drawable/bg_image"
+                        android:backgroundTint="@color/hint"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textAllCaps="false"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="110sp"
+                        android:layout_height="33sp"/>
+                </LinearLayout>
+
+                <!-- Alamat -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_et_alamat"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Alamat"
+                        android:paddingBottom="0dp"
+                        android:textColorHint="@color/hint"
+                        app:boxStrokeColor="@color/orange_2"
+                        app:hintTextAppearance="@style/MyTextAppearance">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_alamat_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:maxLength="300"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="200sp"
+                    android:layout_height="55sp"
+                    android:text="Update"
+                    android:background="@drawable/bg_image"
+                    android:backgroundTint="@color/hint"
+                    android:fontFamily="@font/outfit_medium"
+                    android:layout_marginTop="15dp"
+                    android:textAllCaps="false"
+                    android:foreground="?attr/selectableItemBackground">
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:id="@+id/progress_update"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="invisible">
+                    </ProgressBar>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AplikasiPMO" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_2</item>
+        <item name="colorPrimaryDark">@color/dark_3</item>
+        <item name="colorAccent">@color/orange_1</item>
+        <!-- Customize your theme here. -->
+        <item name="itemBackground">@color/dark_2</item>
+    </style>
+</resources>

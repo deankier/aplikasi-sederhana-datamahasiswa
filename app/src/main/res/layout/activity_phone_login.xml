@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_2"
+    tools:context=".PhoneLoginActivity">
+
+    <!-- Background -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_shape_auth"
+        android:backgroundTint="@color/orange_2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:src="@drawable/shape_decor_bubble"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.18" />
+
+    <!-- Content -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/btn_back_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="4dp"
+        android:paddingStart="8dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_back"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pmo_logo" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_medium"
+        android:text="Masuk"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Masukan nomor telepon yang terdaftar"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
+        android:id="@+id/container_login"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_container_auth"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/paddingend"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/country_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+62"
+                android:textColor="@color/orange_2"
+                android:fontFamily="@font/outfit_semibold"
+                android:textSize="17sp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/hover_edit_text"
+                android:cursorVisible="true"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="8123xxxxxxxx"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:paddingStart="11dp"
+                android:textColor="@color/orange_1"
+                android:textColorHint="@color/hint"
+                android:textCursorDrawable="@null"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_login_phone"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_button_auth"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/outfit_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="Masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/btn_w_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_regular"
+            android:text="Masuk dengan Email"
+            android:textAlignment="center"
+            android:textColor="@color/orange_2"
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Belum Punya Akun ?"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/container_login" />
+
+    <TextView
+        android:id="@+id/btn_daftar_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Daftar"
+        android:textAlignment="center"
+        android:textColor="@color/orange_2"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/container_login" />
+
+    <ProgressBar
+        android:id="@+id/progress_phone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/paddingend"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/btn_daftar_phone"></ProgressBar>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_2"
+    tools:context=".LoginActivity">
+
+    <!-- Background -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_shape_auth"
+        android:backgroundTint="@color/orange_2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:src="@drawable/shape_decor_bubble"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.18" />
+
+    <!-- Content -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pmo_logo" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_medium"
+        android:text="Masuk"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Masuk menggunakan email yang sudah \nterdaftar"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
+        android:id="@+id/container_login"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_container_auth"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/paddingend"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <EditText
+            android:id="@+id/input_email_login"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/hover_edit_text"
+            android:cursorVisible="true"
+            android:drawableStart="@drawable/ic_email_hover"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/outfit_regular"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="11dp"
+            android:textColor="@color/orange_1"
+            android:textColorHint="@color/hint"
+            android:textCursorDrawable="@null"
+            android:textSize="17dp" />
+
+
+        <EditText
+            android:id="@+id/input_password_login"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/hover_edit_text"
+            android:cursorVisible="true"
+            android:drawableStart="@drawable/ic_lock_hover"
+            android:drawablePadding="11dp"
+            android:fontFamily="@font/outfit_regular"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="11.5dp"
+            android:textColor="@color/orange_1"
+            android:textColorHint="@color/hint"
+            android:textCursorDrawable="@null"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_button_auth"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/outfit_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="Masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/btn_lupa_password"
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:fontFamily="@font/outfit_regular"
+                android:text="Lupa password ?"
+                android:textColor="@color/orange_2"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/paddingend"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_regular"
+            android:text="Masuk dengan :"
+            android:textColor="@color/orange_2"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/paddingend"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <Button
+            android:id="@+id/btn_w_phone"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_button_auth2"
+            android:backgroundTint="@color/dark_1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/outfit_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="Telepon"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Belum Punya Akun ?"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/container_login" />
+
+    <TextView
+        android:id="@+id/btn_daftar_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:fontFamily="@font/outfit_regular"
+        android:paddingHorizontal="5dp"
+        android:text="Daftar"
+        android:textAlignment="center"
+        android:textColor="@color/orange_2"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/container_login" />
+
+    <ProgressBar
+        android:layout_marginTop="10dp"
+        android:id="@+id/progress_login"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/paddingend"
+        app:layout_constraintStart_toStartOf="@+id/paddingstart"
+        app:layout_constraintTop_toBottomOf="@+id/btn_daftar_login"></ProgressBar>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

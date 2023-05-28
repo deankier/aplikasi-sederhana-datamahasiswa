@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btn_auth">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="btn_auth_click">
+        <item name="android:layout_width">298dp</item>
+        <item name="android:layout_height">38dp</item>
+    </style>
+
+    <style name="btn_text">
+        <item name="android:clickable">true</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="android:textColor">@color/orange_2</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="MyTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/orange_2</item>
+        <item name="fontFamily">@font/outfit_regular</item>
+    </style>
+
+    <style name="MyTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:background">@drawable/floating_bg</item>
+        <!-- ... other customizations ... -->
+    </style>
+
+    <style name="Style_TextMenu">
+        <item name="fontFamily">@font/outfit_regular</item>
+    </style>
+
+    <style name="BasePopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="android:background">@color/dark_2</item>
+    </style>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_2"
+    android:id="@+id/fragment_data"
+    tools:context=".ui.DataMhs.DataMhsFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_lihat"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_image"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_outward" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Lihat Data"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_tambah"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_image"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_library_add" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Tambah Data"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
