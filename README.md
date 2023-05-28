@@ -1,2 +1,2 @@
-# aplikasi-sederhana-datamahasiswa
-aplikasi project mata kuliah pemrograman mobile tengah semester
+# Aplikasi Sederhana Datamahasiswa Android
+Aplikasi project mata kuliah pemrograman mobile tengah semester
